@@ -43,13 +43,27 @@ namespace Arbol2
                         }
                     }
                 }
+            },
+            new Nodo
+                    {
+                        Valor = "/",
+                        Hijos =
+                        {
+                            new Nodo
+                            {
+                                Valor = "3"
+                            }
+                        }
+                    }
+                }
+
             };
             Manejador manejadorArbol = new Manejador();
             Console.WriteLine($"Su estructura es:{manejadorArbol.ImprimirArbolInfijo(raiz)}");
             Console.WriteLine($"Numero de hojas: {manejadorArbol.NumerosHojas(raiz)}");
             Console.WriteLine($"Numero de nodos: {manejadorArbol.NumerosNodos(raiz)}");
             Console.WriteLine($"Numero de niveles: {manejadorArbol.NumerosNiveles(raiz)}");
-            Console.WriteLine($"Numero resultado es :39");
+            Console.WriteLine($"Numero resultado es :13");
         }
     }
 
