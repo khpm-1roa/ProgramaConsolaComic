@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Arbol2_1
+namespace Arbol2
 {
     class Program
     {
