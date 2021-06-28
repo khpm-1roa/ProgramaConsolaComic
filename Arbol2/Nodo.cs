@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Arbol2
+namespace Arbol2_1
 {
   
         public class Nodo
