@@ -43,20 +43,6 @@ namespace Arbol2
                         }
                     }
                 }
-            },
-            new Nodo
-                    {
-                        Valor = "/",
-                        Hijos =
-                        {
-                            new Nodo
-                            {
-                                Valor = "3"
-                            }
-                        }
-                    }
-                }
-
             };
             Manejador manejadorArbol = new Manejador();
             Console.WriteLine($"Su estructura es:{manejadorArbol.ImprimirArbolInfijo(raiz)}");
