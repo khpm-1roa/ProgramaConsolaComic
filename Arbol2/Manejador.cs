@@ -1,9 +1,9 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Arbol2
+namespace Arbol2_1
 {
     class Manejador
     {
@@ -53,12 +53,28 @@ namespace Arbol2
         }
         internal string ImprimirArbolInfijo(Nodo nodo)
         {
-            //Analiza el comportamiento de una hoja
+            
             if (!nodo.Hijos.Any())
                 return nodo.Valor;
 
-            //Analizo cuando no soy hoja
+
             return $"( {ImprimirArbolInfijo(nodo.Hijos[0])} {nodo.Valor} {ImprimirArbolInfijo(nodo.Hijos[1])})";
+        }
+        internal string ImprimirArbolPrefijo(Nodo nodo)
+        {
+            if (!nodo.Hijos.Any())
+                return nodo.Valor;
+
+            return $"({nodo.Valor} {ImprimirArbolPrefijo(nodo.Hijos[0])} {ImprimirArbolPrefijo(nodo.Hijos[1])})";
+        }
+        internal string ImprimirArbolPostFijo(Nodo nodo)
+        {
+            if (!nodo.Hijos.Any())
+                return nodo.Valor;
+
+            return $" ({ImprimirArbolPostFijo(nodo.Hijos[0])} {ImprimirArbolPostFijo(nodo.Hijos[1])} {nodo.Valor})";
+
+
         }
 
         internal object Resultado(Nodo raiz)
